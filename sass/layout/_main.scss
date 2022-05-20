@@ -1,41 +1,109 @@
 @use '../abstracts' as abs;
 
-.gallery {
-	padding-inline: 0.75rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas: 
-		'one	two		two'
-		'three	three	four'
-		'six	five 	four';
-	gap: 0.75rem;
-	align-items: stretch;
-	margin-bottom: 2.625rem;
+.checkout {
 
-	@include abs.breakpoint(medium) {
-		width: 66%;
-		max-width: abs.rem(960);
-		margin-inline: auto;
-		margin-bottom: 8.375rem;
-		gap: 2rem 2.25rem;
+	&__title {
+		margin-top: 2rem;
+		margin-bottom: 1.25rem;
+		margin-left: 1.125rem;
+		font-size: 1.5rem;
+		color: var(--clr-dark-gray);
 	}
+}
+
+.order {
+	margin-inline: 0.75rem;
+	padding: 1.5rem;
+	background-color: var(--clr-gray-bg);
+	border-radius: 0.75rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.item-wrapper {
+	margin-bottom: 5.4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.item {
+	display: flex;
+	gap: 10%;
 
 	&__img {
+		width: 40%;
 		border-radius: 0.75rem;
-
-		&--1 { grid-area: one; }
-		
-		&--2 { grid-area: two; }
-			
-		&--3 { grid-area: three; }
-			
-		&--4 { grid-area: four; }
-
-		&--5 { grid-area: five; }
-
-		&--6 { grid-area: six; }
 	}
+
+	&__data {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__name {
+		color: var(--clr-dark-gray);
+		font-size: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		&-discounted {
+			color: var(--clr-orange);
+			font-size: 0.875rem;
+		}
+
+		&-original {
+			color: var(--clr-dark-gray);
+			font-size: 0.625rem;
+			text-decoration: line-through;
+		}
+	}
+
+	&__count {
+		// Style the outer container
+		display: inline-flex;
+		border: 1px solid var(--clr-placeholder);
+		border-radius: 0.75rem;
+		padding: 1rem;
+		margin-top: auto;
+		width: 82%;
+
+
+		// Get rid of default arrow buttons
+		input[type='number'] {
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
+			appearance: textfield;
+			width: 100%;
+		}
+		
+		input[type='number']::-webkit-inner-spin-button,
+		input[type='number']::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+		}
+
+		
+	}
+}
+
+.costs-wrapper {
+	width: 100%;
+}
+
+.cost {
+	border-top: 1px solid #bdbdbd;
+	padding-block: 0.5rem;
+	font-size: 0.875rem;
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer {

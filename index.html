@@ -16,6 +16,60 @@
     <link rel="stylesheet" href="dist/style.css">
   </head>
   <body>
-    <h1>hello</h1>
+    <main class="checkout">
+      <h1 class="checkout__title">Checkout</h1>
+
+      <div class="order">
+        <!-- could use an item wrapper here -->
+        <div class="item-wrapper">
+          <div class="item">
+            <img src="./img/photo1.png" alt="Vintage backpack" class="item__img">
+            <div class="item__data">
+              <p class="item__name">Vintage Backpack</p>
+              <div class="item__price">
+                <p class="item__price-discounted">$54.99</p>
+                <p class="item__price-original">$94.99</p>
+              </div>
+              <!-- number input with buttons -->
+              <div class="item__count">
+                <!-- <button id="dec">-</button> -->
+                <input type="number" name="quantity" id="quantity" min="0" placeholder="0" value="1">
+                <!-- <button id="inc">+</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/photo2.png" alt="Levi shoes" class="item__img">
+            <div class="item__data">
+              <p class="item__name">Levi Shoes</p>
+              <div class="item__price">
+                <p class="item__price-discounted">$74.99</p>
+                <p class="item__price-original">$124.99</p>
+              </div>
+              <!-- number input with buttons -->
+              <div class="item__count">
+                <!-- <button id="dec">-</button> -->
+                <input type="number" name="quantity" id="quantity" min="0" placeholder="0" value="1">
+                <!-- <button id="inc">+</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="costs-wrapper">
+          <div class="cost">
+            <p class="cost__label">Shipping</p>
+            <p class="cost__amount">$19</p>
+          </div>
+  
+          <div class="cost">
+            <p class="cost__label">Total</p>
+            <p class="cost__amount">$148.98</p>
+          </div>
+        </div>
+
+      </div>
+
+    </main> 
   </body>
 </html>
