@@ -86,12 +86,18 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.checkout__title {
+.title {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
   margin-left: 1.125rem;
   font-size: 1.5rem;
   color: var(--clr-dark-gray);
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .order {
@@ -190,6 +196,90 @@ select {
   font-size: 0.875rem;
   display: flex;
   justify-content: space-between;
+}
+
+.form {
+  margin-inline: 0.75rem;
+  margin-bottom: 5.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8125rem;
+}
+.form__check label {
+  font-size: 0.625rem;
+  color: var(--clr-label);
+}
+.form__submit {
+  background-color: var(--clr-orange);
+  color: #fff;
+  font-size: 1rem;
+  width: 50%;
+  padding-block: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  align-self: flex-end;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-section__title {
+  font-size: 0.875rem;
+}
+.form-section__row {
+  display: flex;
+  gap: 1.5rem;
+}
+.form-section__row .form-section__input {
+  width: 50%;
+}
+.form-section__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+.form-section__input label {
+  font-size: 0.625rem;
+  color: var(--clr-label);
+}
+.form-section__input .input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--clr-placeholder);
+  border-radius: 0.75rem;
+}
+.form-section__input .input-wrapper .material-icons {
+  color: var(--clr-placeholder);
+  width: 1rem;
+}
+.form-section__input .input-wrapper input,
+.form-section__input .input-wrapper select {
+  padding: 0;
+  width: 100%;
+  border: 0;
+  color: var(--clr-dark);
+  font-size: 0.75rem;
+}
+.form-section__input .input-wrapper input:focus,
+.form-section__input .input-wrapper select:focus {
+  outline: none;
+}
+.form-section__input .input-wrapper input::-moz-placeholder, .form-section__input .input-wrapper select::-moz-placeholder {
+  color: var(--clr-placeholder);
+  font-size: 0.75rem;
+}
+.form-section__input .input-wrapper input:-ms-input-placeholder, .form-section__input .input-wrapper select:-ms-input-placeholder {
+  color: var(--clr-placeholder);
+  font-size: 0.75rem;
+}
+.form-section__input .input-wrapper input::placeholder,
+.form-section__input .input-wrapper select::placeholder {
+  color: var(--clr-placeholder);
+  font-size: 0.75rem;
 }
 
 .footer {

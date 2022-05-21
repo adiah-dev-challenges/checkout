@@ -20,9 +20,11 @@
     <link rel="stylesheet" href="dist/style.css">
   </head>
   <body>
-    <main class="checkout">
-      <h1 class="checkout__title">Checkout</h1>
+    <header>
+      <h1 class="title">Checkout</h1>
+    </header>
 
+    <main class="checkout">
       <div class="order">
         <!-- could use an item wrapper here -->
         <div class="item-wrapper">
@@ -74,6 +76,78 @@
 
       </div>
 
+      <form action="#" class="form">
+        <section class="form-section">
+          <h2 class="form-section__title">Contact information</h2>
+          <div class="form-section__input">
+            <label for="email">E-mail</label>
+            <div class="input-wrapper">
+              <span class="material-icons">mail</span>
+              <input type="email" name="" id="email" placeholder="Enter your email...">
+            </div>
+          </div>
+          <div class="form-section__input">
+            <label for="phone">Phone</label>
+            <div class="input-wrapper">
+              <span class="material-icons">call</span>
+              <input type="text" name="" id="phone" placeholder="Enter your phone...">
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2 class="form-section__title">Shipping Address</h2>
+          <div class="form-section__input">
+            <label for="name">Full name</label>
+            <div class="input-wrapper">
+              <span class="material-icons">account_circle</span>
+              <input type="text" name="" id="name" placeholder="Your name...">
+            </div>
+          </div>
+          <div class="form-section__input">
+            <label for="address">Address</label>
+            <div class="input-wrapper">
+              <span class="material-icons">house</span>
+              <input type="text" name="" id="address" placeholder="Your address...">
+            </div>
+          </div>
+          <div class="form-section__input">
+            <label for="city">City</label>
+            <div class="input-wrapper">
+              <span class="material-icons">location_city</span>
+              <input type="text" name="" id="city" placeholder="Your city...">
+            </div>
+          </div>
+          <div class="form-section__row">
+            <div class="form-section__input">
+              <label for="country">Country</label>
+              <div class="input-wrapper">
+                <span class="material-icons">location_city</span>
+                <select name="" id="country">
+
+                </select>             
+              </div>
+            </div>
+            <div class="form-section__input">
+              <label for="postal">Postal code</label>
+              <div class="input-wrapper">
+                <span class="material-icons">markunread_mailbox</span>
+                <input type="text" name="" id="postal" placeholder="Your postal code...">
+              </div>
+            </div>
+          </div>
+          <div class="form__check">
+            <input type="checkbox" name="" id="save">
+            <label for="save">Save this information for next time</label>
+          </div>
+          <input class="form__submit" type="submit" value="Continue">
+        </section>
+      </form>
     </main> 
+    <footer class="footer">
+      <p class="footer__attribution">
+      created by <a href="https://devchallenges.io/portfolio/nathanieladiah" class="footer__link">nathanieladiah</a> - devchallenges.io
+      </p>
+    </footer>
   </body>
 </html>
