@@ -135,7 +135,8 @@ header .title {
 }
 @media (min-width: 56.25em) {
   .order {
-    width: 40%;
+    width: 42%;
+    padding: 1.875rem;
     margin-inline: 0;
     align-self: flex-start;
   }
@@ -147,6 +148,12 @@ header .title {
   flex-direction: column;
   gap: 1.875rem;
 }
+@media (min-width: 56.25em) {
+  .item-wrapper {
+    margin-bottom: 6rem;
+    gap: 2rem;
+  }
+}
 
 .item {
   display: flex;
@@ -154,7 +161,9 @@ header .title {
 }
 .item__img {
   width: 40%;
+  aspect-ratio: 1;
   border-radius: 0.75rem;
+  align-self: center;
 }
 .item__data {
   width: 50%;
@@ -166,6 +175,11 @@ header .title {
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 56.25em) {
+  .item__name {
+    font-size: 1rem;
+  }
+}
 .item__price {
   display: flex;
   align-items: center;
@@ -175,10 +189,20 @@ header .title {
   color: var(--clr-orange);
   font-size: 0.875rem;
 }
+@media (min-width: 56.25em) {
+  .item__price-discounted {
+    font-size: 1rem;
+  }
+}
 .item__price-original {
   color: var(--clr-dark-gray);
   font-size: 0.625rem;
   text-decoration: line-through;
+}
+@media (min-width: 56.25em) {
+  .item__price-original {
+    font-size: 0.75rem;
+  }
 }
 .item__count {
   display: inline-flex;
@@ -227,6 +251,11 @@ header .title {
   font-size: 0.875rem;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 56.25em) {
+  .cost__label {
+    font-size: 1.125rem;
+  }
 }
 
 .form {
