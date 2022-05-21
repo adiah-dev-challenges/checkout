@@ -1,17 +1,41 @@
 @use '../abstracts' as abs;
 
-.title {
-	margin-top: 2rem;
-	margin-bottom: 1.25rem;
-	margin-left: 1.125rem;
-	font-size: 1.5rem;
-	color: var(--clr-dark-gray);
+header {
+	@include abs.breakpoint(large) {
+		width: 66%;
+		max-width: abs.rem(960);
+		margin-inline: auto;
+	}
+
+	.title {
+		margin-top: 2rem;
+		margin-bottom: 1.25rem;
+		margin-left: 1.125rem;
+		font-size: 1.5rem;
+		color: var(--clr-dark-gray);
+
+		@include abs.breakpoint(large) {
+			margin-top: 2rem;
+			margin-left: 0;
+			margin-bottom: 3.25rem;
+			font-size: 2.25rem;
+		}
+	}
 }
 
+
 .checkout {
- display: flex;
- flex-direction: column;
- gap: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+
+	@include abs.breakpoint(large) {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		width: 66%;
+		max-width: abs.rem(960);
+		margin-inline: auto;
+	}
 	
 }
 
@@ -26,6 +50,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@include abs.breakpoint(large) {
+		width: 40%;
+		margin-inline: 0;
+		align-self: flex-start;
+	}
 }
 
 .item-wrapper {
@@ -141,7 +171,15 @@
 	flex-direction: column;
 	gap: 2.8125rem;
 
+	@include abs.breakpoint(large) {
+		width: 48%;
+		margin-inline: 0;
+	}
+
 	 &__check {
+		 display: flex;
+		 align-items: center;
+
 		 label {
 			 font-size: 0.625rem;
 			 color: var(--clr-label);
